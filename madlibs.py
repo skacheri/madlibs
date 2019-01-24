@@ -46,12 +46,11 @@ def show_madlib_form():
     """Does user want to play game?"""
 
     choice = request.args.get("game_choice")
-# ADD PLAYER NAME!!!!!!!!!!!!!!!!!!!!
 
     if choice == "Yes":
         return render_template("game.html")
     else:
-        return render_template("goodbye.html", person=player)
+        return render_template("goodbye.html")
 
 @app.route('/madlib')
 def show_madlib():
